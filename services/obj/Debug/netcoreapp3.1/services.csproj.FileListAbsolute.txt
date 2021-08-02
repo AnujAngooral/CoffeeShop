@@ -1,0 +1,14 @@
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\bin\Debug\netcoreapp3.1\services.deps.json
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\bin\Debug\netcoreapp3.1\services.dll
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\bin\Debug\netcoreapp3.1\services.pdb
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\bin\Debug\netcoreapp3.1\Dal.dll
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\bin\Debug\netcoreapp3.1\Dal.pdb
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\obj\Debug\netcoreapp3.1\services.csproj.AssemblyReference.cache
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\obj\Debug\netcoreapp3.1\services.AssemblyInfoInputs.cache
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\obj\Debug\netcoreapp3.1\services.AssemblyInfo.cs
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\obj\Debug\netcoreapp3.1\services.csproj.CoreCompileInputs.cache
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\obj\Debug\netcoreapp3.1\services.csproj.CopyComplete
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\obj\Debug\netcoreapp3.1\services.dll
+C:\Users\Anuj\Documents\GitHub\CoffeeShop\services\obj\Debug\netcoreapp3.1\services.pdb
