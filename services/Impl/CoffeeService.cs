@@ -23,12 +23,12 @@ namespace services.Impl
             _mapper = mapper;
             _logger = logger;
         }
-        public async Task<(bool IsSuccess, Coffee Coffee, string ErrorMessage)> Add(ViewModels.Coffee coffee)
+        public async Task<(bool IsSuccess, Coffee Coffee, string ErrorMessage)> AddAsync(ViewModels.Coffee coffee)
         {
             try
             {
                 var coffeeDTO = _mapper.Map<Dal.Models.Coffee>(coffee);
-                await _coffeeRepository.Add(coffeeDTO);
+                await _coffeeRepository.AddAsync(coffeeDTO);
                 await _coffeeRepository.CommitAsync();
                 coffee.Id = coffeeDTO.Id;
 
@@ -42,11 +42,11 @@ namespace services.Impl
 
         }
 
-        public async Task<(bool IsSuccess, Coffee Coffee, string ErrorMessage)> Get(int Id)
+        public async Task<(bool IsSuccess, Coffee Coffee, string ErrorMessage)> GetAsync(int Id)
         {
             try
             {
-                return (true, _mapper.Map<ViewModels.Coffee>(await _coffeeRepository.Get(x => x.Id == Id)), null);
+                return (true, _mapper.Map<ViewModels.Coffee>(await _coffeeRepository.GetAsync(x => x.Id == Id)), null);
             }
             catch (Exception ex)
             {
@@ -55,11 +55,11 @@ namespace services.Impl
             }
         }
 
-        public async Task<(bool IsSuccess, IEnumerable<Coffee> Coffees,string ErrorMessage)> Get()
+        public async Task<(bool IsSuccess, IEnumerable<Coffee> Coffees,string ErrorMessage)> GetAsync()
         {
             try
             {
-                return (true, _mapper.Map<IEnumerable<Coffee>>(await _coffeeRepository.Get()), null);
+                return (true, _mapper.Map<IEnumerable<Coffee>>(await _coffeeRepository.GetAsync()), null);
             }
             catch (Exception ex)
             {

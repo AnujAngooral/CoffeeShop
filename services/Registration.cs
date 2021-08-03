@@ -12,6 +12,10 @@ namespace services
 {
     public static class Registration
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
         public static void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ICoffeeService, CoffeeService>();
@@ -38,7 +42,7 @@ namespace services
 
             CreateMap<ViewModels.Coffee, Dal.Models.Coffee>();
             CreateMap<Dal.Models.Coffee, ViewModels.Coffee>();
-         //   CreateMap<IEnumerable<Dal.Models.Coffee>, IEnumerable<ViewModels.Coffee>>();
+         
 
         }
     }

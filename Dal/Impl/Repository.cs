@@ -19,17 +19,17 @@ namespace Dal.Impl
             this.dbContext = context;
             this.dbSet = context.Set<T>();
         }
-        public async Task Add(T entity)
+        public async Task AddAsync(T entity)
         {
             await dbContext.AddAsync(entity);
         }
 
-        public async Task<T> Get(Expression<Func<T, bool>> filter)
+        public async Task<T> GetAsync(Expression<Func<T, bool>> filter)
         {
             return await dbSet.FirstAsync(filter);
         }
 
-        public async Task<IEnumerable<T>> Get()
+        public async Task<IEnumerable<T>> GetAsync()
         {
             return await dbSet.ToListAsync();
         }
