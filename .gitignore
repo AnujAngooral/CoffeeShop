@@ -342,3 +342,8 @@ healthchecksdb
 services/bin/Debug/netcoreapp3.1/Dal.dll
 Api/obj/Debug/netcoreapp3.1/Api.csproj.AssemblyReference.cache
 Api/obj/Debug/netcoreapp3.1/Api.csproj.AssemblyReference.cache
+Api/obj/Debug/netcoreapp3.1/Api.csproj.AssemblyReference.cache
+Api/obj/Debug/netcoreapp3.1/Api.csproj.AssemblyReference.cache
+Api/obj/Debug/netcoreapp3.1/Api.AssemblyInfoInputs.cache
+Api/obj/Debug/netcoreapp3.1/Api.AssemblyInfo.cs
+Api/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
