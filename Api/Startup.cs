@@ -32,20 +32,34 @@ namespace Api
         {
             services.AddControllers();
             Registration.ConfigureServices(services);
+            services.AddSwaggerGen();
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            string baseApiUrl = Configuration.GetSection("BaseApiUrl").Value;
+            app.UseSwagger();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             // Hook in the global error-handling middleware
+            app.UseSwaggerUI(c =>
+            {
+       // For Debug in Kestrel
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Web API V1");
+
+            // To deploy on IIS
+            c.SwaggerEndpoint(""+baseApiUrl+"/swagger/v1/swagger.json", "My API V1");
+
+            });
+
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));
 
             app.UseRouting();
+
 
             app.UseAuthorization();
 

@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+*.dll
+services/bin/Debug/netcoreapp3.1/Dal.dll
+Api/obj/Debug/netcoreapp3.1/Api.csproj.AssemblyReference.cache
+Api/obj/Debug/netcoreapp3.1/Api.csproj.AssemblyReference.cache

@@ -10,7 +10,7 @@ using ViewModels;
 namespace Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+   // [Route("api/[controller]")]
     public class CoffeeController : Controller
     {
         private readonly ILogger<CoffeeController> _logger;
@@ -23,6 +23,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
+        [Route("api/coffee")]
         public async Task<IActionResult> Add(Coffee model)
         {
             var result = await ICoffeeService.AddAsync(model);
@@ -33,7 +34,7 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        [Route("{id}")]
+        [Route("api/coffee/{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var result = await ICoffeeService.GetAsync(id);
@@ -44,6 +45,7 @@ namespace Api.Controllers
         }
 
         [HttpGet]
+        [Route("api/coffee")]
         public async Task<IActionResult> Get()
         {
             var result = await ICoffeeService.GetAsync();
