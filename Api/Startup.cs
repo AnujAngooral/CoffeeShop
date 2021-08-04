@@ -13,7 +13,9 @@ using services.Impl;
 using services.Interface;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Api
@@ -32,7 +34,19 @@ namespace Api
         {
             services.AddControllers();
             Registration.ConfigureServices(services);
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c=> {
+                //c.SwaggerDoc("v1.0", new Microsoft.OpenApi.Models.OpenApiInfo
+                //{
+                //    Title = "My APIs",
+                //    Version = "v1.0",
+                //    Description = "REST APIs "
+                //});
+
+
+                var xmlfile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlpath = Path.Combine(AppContext.BaseDirectory, xmlfile);
+                c.IncludeXmlComments(xmlpath);
+            });
 
         }
 
@@ -48,11 +62,12 @@ namespace Api
             // Hook in the global error-handling middleware
             app.UseSwaggerUI(c =>
             {
-       // For Debug in Kestrel
+                // For Debug in Kestrel
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Web API V1");
-
-            // To deploy on IIS
-            c.SwaggerEndpoint(""+baseApiUrl+"/swagger/v1/swagger.json", "My API V1");
+             
+                // To deploy on IIS
+             //    c.SwaggerEndpoint("" + baseApiUrl + "/swagger/v1/swagger.json", "My API V1");
+               // c.SwaggerEndpoint("../swagger/v1/swagger.json", "MyAPI V1");
 
             });
 
@@ -68,7 +83,7 @@ namespace Api
                 endpoints.MapControllers();
             });
 
-            
+
         }
     }
 }
