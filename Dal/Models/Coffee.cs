@@ -14,7 +14,7 @@ namespace Dal.Models
         [Required(ErrorMessage = "Type is required")]
         public string Type { get; set; } // this should be enum type safe
         [Required(ErrorMessage = "isTasty is required")]
-        public bool IsTasty { get; set; }
+        public bool Tasty { get; set; }
 
     }
 }
